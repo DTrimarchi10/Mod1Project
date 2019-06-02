@@ -5,7 +5,7 @@
 * Student pace: **full time**
 * Scheduled project review date/time: **Not yet scheduled**
 * Instructor name: **Rafael Cassaro**
-* Blog post URL: **Not yet created**
+* Blog post URL: [https://medium.com/@dtuk81/visualizations-arent-just-pretty-a7d50874b102?source=friends_link&sk=59c5c7b9be109c20216f8f61d8c29e82]
 
 
 # Motivation
@@ -270,3 +270,8 @@ https://drive.google.com/open?id=1Ndt8z3gEv0DVkgMUnWTsBkfZXQL3kpO7
 My blog entry regarding Visualizations
 
 [https://medium.com/@dtuk81/visualizations-arent-just-pretty-a7d50874b102?source=friends_link&sk=59c5c7b9be109c20216f8f61d8c29e82]
+
+
+```python
+
+```
