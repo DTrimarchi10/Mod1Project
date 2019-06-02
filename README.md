@@ -1,158 +1,272 @@
 
-# Module 1 Final Project
+# Final Project Submission
+
+* Student name: **Dennis Trimarchi**
+* Student pace: **full time**
+* Scheduled project review date/time: **Not yet scheduled**
+* Instructor name: **Rafael Cassaro**
+* Blog post URL: **Not yet created**
 
 
-## Introduction
+# Motivation
+I was motivated to do this project because I have a keen interest in the home values of King's County Washington!!... Oh wait, that's a complete lie. I am doing this project because I am required to review data related to King's County housing, scrub the data, do some analysis, and develop a regression model. With that said, there is a great deal of data available and I am interested in going through a full analysis without being "walked through" the process. I believe that doing this project will give me an idea of my strengths and weaknesses as this stage of my learning as well as give me practice applying data science concepts in Python.
 
-In this lesson, we'll review all of the guidelines and specifications for the final project for Module 1. 
+# Outline
 
-## Objectives
-You will be able to:
-* Describe all required aspects of the final project for Module 1
-* Describe all required deliverables
-* Describe what constitutes a successful project
-* Describe what the experience of the project review should be like
+I have broken this notebook out into sections. All of my Python work is completed in other notebooks. In all, I have four notebooks. The contents of these notebooks are summarized below:
 
-## Final Project Summary
+1. [student_1_Data_cleaning.ipynb](student_1_Data_cleaning.ipynb): Read in King's County housing data. Scrub the data. Handle null values, placeholders and outliers.
+2. [student_2_EDA_Questions.ipynb](student_2_EDA_Questions.ipynb): Start to look at contents of each feature. Formulate three questions, investigate them, and provide an answer/conclusion to those questions.
+3. [student_3_Model.ipynb](student_3_Model.ipynb): Create a model. Iteratively improve the model. Provide and final model and perform model validation.
+4. [student_4_Making_Plots.ipynb](student_4_Making_Plots.ipynb): Notebook used to play around with different plots.
 
-You've made it all the way through the first module of this course - take a minute to celebrate your awesomeness! 
+This readme contains sections that summarize the work from the notebooks above as well as provide Recommendations / Conclusions and links to additional project deliverables.
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-v2-mod1-final-project/master/awesome.gif)
+# Import Data and Scrub
 
-All that remains in Module 1 is to put our newfound data science skills to use with a final project! You should expect this project to take between 20 and 25 hours of solid, focused effort. If you're done way quicker, go back and dig in deeper or try some of the optional "level up" suggestions. If you're worried that you're going to get to 30 hrs and still not even have the data imported, reach out to an instructor in Slack ASAP to get some help!
+See details in [student_1_Data_cleaning.ipynb](student_1_Data_cleaning.ipynb) if desired. A summary of the actions taken for each feature is provided at the top of the notebook.
 
-## The Dataset
+In total I removed **634** out of **21597** rows of data during Data Cleaning. I also did a little EDA with the creation of `zip_981` feature.
 
-For this project, you'll be working with the King County House Sales dataset. We've modified the dataset to make it a bit more fun and challenging.  The dataset can be found in the file `"kc_house_data.csv"`, in this repo. 
+My process was to first look at the datatype and convert it if needed. Second, to look for Null values. Third, to look for outliers by running feature histograms and scatterplots against the target. However, in trying to convert some feature datatypes, the null values became apparent on their own. Below is a summary of the data cleaning actions for each feature:
 
-The description of the column names can be found in the column_names.md file in this repository. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions relating to what the data means.
+# EDA & Questions
 
-You'll clean, explore, and model this dataset with a multivariate linear regression to predict the sale price of houses as accurately as possible. 
+See details in [student_2_EDA_Questions.ipynb](student_2_EDA_Questions.ipynb).
 
-## The Deliverables
+When I initially looked at the data during the Data Scrubbing phase, I thought about the following questions:
 
-There will be four  deliverables for this project:
-
-1. A well documented **Jupyter Notebook** containing any code you've written for this project and comments explaining it. This work will need to be pushed to your GitHub repository in order to submit your project.  
-2. A short **Keynote/PowerPoint/Google Slides presentation** (delivered as a PDF export) giving a high-level overview of your methodology and recommendations for non-technical stakeholders. Make sure to also add and commit this pdf of your non-technical presentation to your repository with a file name of presentation.pdf.
-3. **A blog post** (800-1500 words) about one element of the project - it could be the EDA, the feature selection, the choice of visualizations or anything else technical relating to the project. It should be targeted at your peers - aspiring data scientists.	
-4. A **Video Walkthrough** of your non-technical presentation. Some common video recording tools used are Zoom, Quicktime, and Nimbus. After you record your presentation, publish it on a service like YouTube or Google Drive, you will need a link to the video to submit your project.
-
-## The Process
-
-### 1. Getting Started
-
-Please start by reviewing this document. If you have any questions, please ask them in slack ASAP so (a) we can answer the questions and (b) so we can update this repository to make it clearer.
-
- Be sure to let the instructor team know when you’ve started working on a project, either by reaching out over Slack or, if you are in a full-time or part-time cohort, by connecting with your Cohort Lead in your weekly 1:1. If you’re not sure who to reach out to, post in the #online-ds-sp-000 channel in Slack.
-
-Once you're done with the first 8 sections, please start on the project. Do that by forking this repository, cloning it locally, and working in the student.ipynb file. Make sure to also add and commit a pdf of your presentation to the repository with a file name of `presentation.pdf`.
-
-### 2. The Project Review
-
-> **When you start on the project, please also reach out to an instructor immediately to schedule your project review** (if you're not sure who to schedule with, please ask in slack!)
-
-#### What to expect from the Project Review
-
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation *(sometimes technical interviews will feel arbitrary or unfair - if you want to get the job, commenting on that is seldom a good choice)*.
-
-The project review is comprised of a 45 minute 1:1 session with one of the instructors. During your project review, be prepared to:
-
-#### 1. Deliver your PDF presentation to a non-technical stakeholder. 
-In this phase of the review (~10 mins) your instructor will play the part of a non-technical stakeholder that you are presenting your findings to. The presentation should not exceed 5 minutes, giving the "stakeholder" 5 minutes to ask questions.
-
-In the first half of the presentation (2-3 mins), you should summarize your methodology in a way that will be comprehensible to someone with no background in data science and that will increase their confidence in you and your findings. In the second half (the remaining 2-3 mins) you should summarize your findings and be ready to answer a couple of non-technical questions from the audience. The questions might relate to technical topics (sampling bias, confidence, etc) but will be asked in a non-technical way and need to be answered in a way that does not assume a background in statistics or machine learning. You can assume a smart, business stakeholder, with a non-quantitative college degree.
-
-#### 2. Go through the Jupyter Notebook, answering questions about how you made certain decisions. Be ready to explain things like:
-    * "how did you pick the question(s) that you did?"
-    * "why are these questions important from a business perspective?"
-    * "how did you decide on the data cleaning options you performed?"
-    * "why did you choose a given method or library?"
-    * "why did you select those visualizations and what did you learn from each of them?"
-    * "why did you pick those features as predictors?"
-    * "how would you interpret the results?"
-    * "how confident are you in the predictive quality of the results?"
-    * "what are some of the things that could cause the results to be wrong?"
-
-Think of the first phase of the review (~30 mins) as a technical boss reviewing your work and asking questions about it before green-lighting you to present to the business team. You should practice using the appropriate technical vocabulary to explain yourself. Don't be surprised if the instructor jumps around or sometimes cuts you off - there is a lot of ground to cover, so that may happen.
-
-If any requirements are missing or if significant gaps in understanding are uncovered, be prepared to do one or all of the following:
-* Perform additional data cleanup, visualization, feature selection, modeling and/or model validation
-* Submit an improved version
-* Meet again for another Project Review
-
-What won't happen:
-* You won't be yelled at, belittled, or scolded
-* You won't be put on the spot without support
-* There's nothing you can do to instantly fail or blow it
-
-**Please note: We need to receive the URL of your repository at least 24 hours before and please have the project finished at least 3 hours before your review so we can look at your materials in advance.** 
+1. *Are waterfront properties significantly more expensive than non-waterfront?*
+2. *Are newer homes more expensive (yr_built)?*
+3. *Is there a particular location or locations where I can categorize homes as more expensive?*
 
 
-## Requirements
 
-This section outlines the rubric we'll use to evaluate your project.
+## Question 1 - waterfront view properties
 
-### 1. Technical Report Must-Haves
+*Are waterfront properties significantly more expensive than non-waterfront?*
 
-For this project, your Jupyter Notebook should meet the following specifications:
+Unfortunately, when I thought of this question, I did not realize that the DataFrame would contain so few records (only 98) for waterfront property. I did an analysis for the sake of the question anyway.
 
-#### Organization/Code Cleanliness
-
-* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.  All functions have docstrings that act as professional-quality documentation
-* The notebook is written for technical audiences with a way to both understand your approach and reproduce your results. The target audience for this deliverable is other data scientists looking to validate your findings. 
-
-#### Visualizations & EDA
-
-* Your project contains at least 4 meaningful data visualizations, with corresponding interpretations. All visualizations are well labeled with axes labels, a title, and a legend (when appropriate)  
-* You pose at least 3 meaningful questions and answer them through EDA.  These questions should be well labeled and easy to identify inside the notebook. 
-    * **Level Up**: Each question is clearly answered with a visualization that makes the answer easy to understand.   
-* Your notebook should contain 1 - 2 paragraphs briefly explaining your approach to this project.
-    
-#### Model Quality/Approach
-
-* Your model should not include any predictors with p-values greater than .05.  
-* Your notebook shows an iterative approach to modeling, and details the parameters and results of the model at each iteration.  
-    * **Level Up**: Whenever necessary, you briefly explain the changes made from one iteration to the next, and why you made these choices.  
-* You provide at least 1 paragraph explaining your final model.   
-* You pick at least 3 coefficients from your final model and explain their impact on the price of a house in this dataset.   
+- Correlation Coefficient **0.015** - Weak positive correlation with price.
+- Regression p-value **0.00** - Indicates that the feature is statistically significant (non-zero coefficient).
+- Regression model coefficient **6.05e05** - Indicates that having a view of the waterfront results in an increase of about $600K for the price.
+- R-Squared **0.021** - Indicates that the feature only accounts for 2% of the variation in price for the dataset.
 
 
-### 2. Non-Technical Presentation Must-Haves
+I initially thought that the regression coefficient was ridiculous, but the data does seem to support it. For example: 
+- Homes with waterfront: median price = 1,150,000
+- Homes without waterfront: median price = 445,000
 
-The second deliverable should be a Keynote, PowerPoint or Google Slides presentation delivered as a pdf file in your fork of this repository with the file name of `presentation.pdf` detailing the results of your project.  Your target audience is non-technical people interested in using your findings to maximize their profit when selling their home. 
+The difference in median value is over 700K. So, the regression coefficient isn't that surprising considering the median values of our dataset.
 
-Your presentation should:
+The very low R-Squared makes perfect sense because home prices are based on many other factors and waterfront view is weakly correlated with price. 
 
-* Contain between 5 - 10 professional-quality slides.  
-    * **Level Up**: The slides should use visualizations whenever possible, and avoid walls of text. 
-* Take no more than 5 minutes to present.   
-* Avoid technical jargon and explain the results in a clear, actionable way for non-technical audiences.   
+#### Answer
+Yes. There is a positive correlation and the p-value is less than 0.05. It seems obvious that being a waterfront property would increase value. However, with such a small dataset representing waterfront view, I would want to gather more data (or fill in the missing data) before trusting this result. Additionally, the Seattle area has a lot of waterfront, and it's possible that the abundance and quality of the waterfront would dilute any impact this feature has. 
 
-**_Based on the results of your models, your presentation should discuss at least two concrete features that highly influence housing prices._**
+## Question 2 - newer homes
 
-### 3. Blog Post
+*Are newer homes more expensive?*
 
-Please also write a blog post about one element of the project - it could be the EDA, the feature selection, the choice of visualizations or anything else technical relating to the project. It should be between 800-1500 words and should be targeted at your peers - aspiring data scientists.
+The scatterplot of yr_built vs price didn't appear to have any kind of relationship at first. With a coefficient of 0.053, there is almost no correlation between yr_built and price. However, on the scatterplot for yr_built vs price, there appeared to be a slight positive relationship in more recent years. I created a feature called `built_last_20_years` as a categorical feature which represents homes built in the last 20 years of the dataset (after 1995).
 
-## Submitting your Project
+- Correlation Coefficient **0.13** - Indicates a weak positive relationship with price. Better than yr_built.
+- Regression p-value **0.00** - Indicates that the feature is statistically significant (non-zero coefficient).
+- Regression model coefficient **8.31e4** - Indicates that a home built in the last 20 years will result in a price increase of $83K.
+- R-Squared **0.016** - Indicates that the feature only accounts for 1.6% of the variation in price of the dataset.
 
- You’re almost done! In order to submit your project for review, include the following links to your work in the corresponding fields on the right-hand side of Learn.
+The regression coefficient supports the data below where the difference in median price is about 70K:
+- Not built in last 20 years: median price = 430000.0
+- Built in last 20 years: median price = 497475.0
 
- 1. **GitHub Repo:** Now that you’ve completed your project in Jupyter Notebooks, push your work to GitHub and paste that link to the right. (If you need help doing so, review the resources [here](https://docs.google.com/spreadsheets/d/1CNGDhjcQZDRx2sWByd2v-mgUOjy13Cd_hQYVXPuzEDE/edit#gid=0).)
-_Reminder: Make sure to also add and commit a pdf of your non-technical presentation to the repository with a file name of presentation.pdf._
-2. **Blog Post:** Include a link to your blog post.
-3. **Record Walkthrough:** Include a link to your video walkthrough.
+#### Answer
 
- Hit "I'm done" to wrap it up. You will receive an email in order to schedule your review with your instructor.
+Yes. If you define "newer homes" as homes built in the last 20 years, then there is a positive correlation with price and it is significant with a p-value < 0.05.
+
+## Question 3 - Where are expensive homes located?
+
+*Is there a particular location or locations where I can categorize homes as more expensive?*
+
+I created a scatterplot of latitude vs. longitude with the hue representing price. This creates a nifty looking map of the area with darker color representing higher price. It looks like areas immediately east of downtown Seattle - on the east side of lake washington have a higer prices. Also areas to the north look to be more expensive in general.
+
+1. Calculate distance between two geographical points
+   - I defined a function to provide the distance in miles between two sets of lat/long coordinates. 
+   - For a given location, I could now calculate the distance from that location to all homes in the dataset. 
+2. Search for a location where distances from that location is hightly correlated with price
+   - Iterated through lat and long points in the region of the dataset. 
+   - Calculated distances to that point for every home.
+   - Calculated correlation of those distances with price.
+3. Look at map of the location returned
+   - The function returned a point just northeast of Bellvue, WA. This is an area with many expensive homes, so the result is not a surprise. 
+   - The correlation coefficient with price that the function returned was -0.49 which is better than lat or long individually.
+   - The negative correlation makes sense because as distance from Bellvue increases, price decreases.
+4. Create a new feature called dist_from_Bellvue
+   - Created a new feature with the distance from Bellvue in miles for each home. 
+
+For the new feature:
+
+- Correlation Coefficient **-0.49** - Moderate negative correlation with price.
+- Regression p-value **0.00** - Indicates that the feature is statistically significant (non-zero coefficient).
+- Regression model coefficient **-2.26e04** - Indicates that for every mile away from Bellvue, a home's price decreases by about $22K.
+- R-Squared **0.237** - Indicates that the feature accounts for 23.7% of the variation in price for the dataset. This is pretty great.
+
+#### Answer
+
+Yes. There is a point (47.638, -122.17) just northeast of Bellvue, WA that is correlated with higher prices. The map of the area shows many expensive homes near there. One thing to consider is that if there were other clear areas with clusters of expensive homes, I would want to create new features to handle those locations as well.
+
+## EDA Summary 
+
+There are some high feature correlations with price... But unfortunately, the dataset is overloaded with independent variables that aren't actually independent! They have high correlations with eachother. Nevertheless I decided to keep these features for now and deal with them in the modeling section. I also decided to **drop all features with <0.10 correlation with price**.
+
+- Dropped Features
+   - condition
+   - yr_built
+   - yr_renovated
+   - zipcode
+   - long
+   - zip_981
 
 
-## Summary
+- Top 5 features correlated with price
+   - grade
+   - sqft_living
+   - sqft_living15
+   - sqft_above
+   - log_dist_from_Bellvue
+ 
 
-The end of module projects and project reviews are a critical part of the program. They give you a chance to both bring together all the skills you've learned into realistic projects and to practice key "business judgement" and communication skills that you otherwise might not get as much practice with.
+# Model
 
-The projects are serious and important. They are not graded, but they can be passed and they can be failed. Take the project seriously, put the time in, ask for help from your peers or instructors early and often if you need it, and treat the review as a job interview and you'll do great. We're rooting for you to succeed and we're only going to ask you to take a review again if we believe that you need to. We'll also provide open and honest feedback so you can improve as quickly and efficiently as possible.
+The notebook containing this work is [student_3_Model.ipynb](student_3_Model.ipynb). 
 
-Finally, this is your first project. We don't expect you to remember all of the terms or to get all of the answers right. If in doubt, be honest. If you don't know something, say so. If you can't remember it, just say so. It's very unusual for someone to complete a project review without being asked a question they're unsure of, we know you might be nervous which may affect your performance. Just be as honest, precise and focused as you can be, and you'll do great!
 
+## Collinearity
+
+Because collinearity was a major part of this particular set of features, I decided to put the features together into groups that were highly correlated with eachother. I would only be able to pick one feature from each group during Iterative Modeling. See the groups below:
+
+**collinear groups of features:**
+
+- **Group 1**
+  - sqft_living
+  - ~~sqft_living15~~ Dropped. Highly correlated with sqft_living. Does not add much.
+  - ~~sqft_above~~ Dropped. It is basically the same thing as sqft_living
+  - bedrooms
+  - bathrooms
+  - grade
+
+- **Group 2**
+  - sqft_lot
+  - ~~sqft_lot15~~ Dropped. Doesn't add much. Slightly lower correlation with price.
+  
+- **Group 3**
+  - lat
+  - dist_from_Bellvue
+  - log_dist_from_Bellvue
+  
+## Train / Test Split
+
+I performed a train/test split using Scikit Learn's train_test_split function with an 80/20 split. I used the training set to build my model.
+
+## Feature Selection
+
+I used scikit learn's recursive feature elimination to provide a list of ranked features. I used the output of the feature elimination to help me decide how to begin my model creation. In the end, I decided to iteratively add / remove features and run regressions using OLS in Statsmodels.
+
+General rules followed during feature selection:
+- Include features that are highly correlated with price.
+- Remove features with collinearity magnitudes above 0.2. I wanted independent variables that were truly independent.
+
+### Rundown of model iterations
+
+I ran the regression multiple times with different features added and removed. I've included the iterations summary below in the case of interest.
+
+1. All features: When every feature was included, adj R^2 = 0.688 but there were a bunch of collinear features.
+2. Removed all lowest ranked collinear features from the recursive feature elimination: *bathrooms, bedrooms, sqft_living, dist_from_Bellvue, lat*: adj R^2 = 0.622. All p-values are less than 0.05.
+3. Removed *waterfront*: adj R^2 = 0.606. Even though I think this is an important feature, the data size is so small that I want to take it out of the model for now.
+4. Swapped out *grade* with *sqft_living*: I feel that sqft_living is more generic since grade depends on the county rating system. p-value for *sqft_lot* went up to 0.602 and adj R^2 = 0.620.
+5. Removed *sqft_lot* because of p-value: adj R^2 is still 0.620.
+6. Removed *has_basement*: adj R^2 only changed to 0.619
+7. Removed *built_last_20_yrs*: adj R^2 only changed to 0.617
+8. Added back in *built_last_20_yrs* and removed *floors*: adj R^2 = 0.614
+9. Removed *built_last_20_yrs* again: adj R^2 = 0.614 no change.
+10. Swapped *log_dist_from_Bellvue* for *dist_from_Bellvue*: I like that the latter is not transformed. adj R^2 = 0.614. No change.
+11. Added back in *waterfront*: adj R^2 = 0.631. Even better than the first non-collinear model.
+12. Removed *waterfront*: adj R^2 = 0.614 again. Alas, I still wasn't comfortable including it.
+13. Swapped back *log_dist_from_Bellvue* in place of *dist_from_Bellvue*: I do not like that dist_from_Bellvue has a greater negative impact for distances far away from Bellvue than the log version: adj R^2 = 0.614 - No change.
+
+## Final Model
+
+Price is a function of sqft_living and dist_from_Bellvue. Collinearity in this model is very small as the correlation between sqft_living and log_dist_from_Bellvue is -0.17. Additionally the correlation coefficient with price for both of these features is fairly high (-0.51 for log_dist_drom_Bellvue and 0.67 for sqft_living).
+                
+$$price = 202.80*sqft\_living - 196,800*\ln(dist\_from\_Bellvue) + 550,300$$
+
+* P-values in the model for both independent variables are < 0.05.
+* P(F-statistic) of the model is < 0.05.
+
+
+OLS Model:
+
+
+<img src="OLS_Model.png" style="width: 500px;"/>
+
+## Model Validation
+
+### MSE/RMSE for Train and Test sets
+
+I decided to use scikit learn's LinearRegression function to get my residuals. Luckly, when I ran the regression with scikit learn, my coefficients were identical. Phew...
+
+|   -   | Mean Squared Error | Root Mean Squared Error |
+|:-----:|:------------------:|:-----------------------:|
+| Train |      3.048e+10     |          174589         |
+|  Test |      3.268e+10     |          180781         |
+
+
+
+### K-Fold Cross Validation
+
+Cross Validation 5 divisions
+
+|  Mean Squared Error   | Root Mean Squared Error |
+|:---------------------:|:-----------------------:|
+| (average/5) 3.098e+10 |   (average/5) 176031    |
+|      3.105e+10        |          176234         |
+|      3.067e+10        |          175141         |
+|      3.152e+10        |          177559         |
+|      3.232e+10        |          179783         |
+|      2.935e+10        |          171321         |
+
+The MSE for Cross Validation provides a better estimation of the MSE for my model than the train/test values (although they are very similar). As the MSE is very large, I looked at the RMSE as well. The RMSE can be directly compared to the target variable, in this case price. This means that the standard deviation of my model errors is approximately $176K. This sounds pretty bad, but the R^2 of 0.614 indicates that the model only explains 61\% of the price variable. 
+
+# Conclusion / Discussion
+
+There are a lot of features in this particular dataset and it might seem surprising that all have been removed with the exception of two. However, in he modeling phase, features were selected based on high correlation to price and low correlation with each other. 
+
+The Model is simple in that it only contains two features and it uses information that should be readily available for any home in King County: square footage, and location. Both features are statistically significant in the dataset. 
+
+There are some limitations in this model. Firstly, it can only be applied to data for King County. Homes across the state in other counties could not realistically use distance from Bellvue, WA as a way to predict home price. Additionally, the log of distance from Bellvue creates an issue where homes within very small distances to the reference point (less than a quarter mile) can be inflated. In practice, I would want to put a cap on the second term of the model equation to mitigate this issue.
+
+# Further Work
+
+Some additional information gathering would improve this model. 
+
+In the Seattle area waterfront property is everywhere, and it would be nice to see if having a waterfront view impacts price. Unfortunately, with many of the home records having 'null' values in this field, and having only a few homes with waterfront selected in the dataset, this feature was not included in the model.
+
+*sqft_living* was chosen over *grade* even though both features are highly correlated with price. With more data, it's quite possible that grade could have an impact over R^2 moreseo than sqft_living. Also, it would be beneficial to know how the King County grading system works. What are their grading criteria? It's possible that grade, if always available, could be a better predictor.
+
+Another feature that I would like to investigate further is *sqft_lot*. The scatterplot appeared to have two separate petals which may indicate different functions of sqft_lot based upon another factor - city vs. rural properties perhaps. 
+
+# Slideshow
+
+[presentation.pdf](presentation.pdf)
+
+# Video
+
+https://drive.google.com/open?id=1Ndt8z3gEv0DVkgMUnWTsBkfZXQL3kpO7
+
+
+
+# Blog
+
+My blog entry regarding Visualizations
+
+[https://medium.com/@dtuk81/visualizations-arent-just-pretty-a7d50874b102?source=friends_link&sk=59c5c7b9be109c20216f8f61d8c29e82]
